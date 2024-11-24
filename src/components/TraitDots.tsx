@@ -1,10 +1,9 @@
-const dotCharacter = "O";
-
 export interface TraitDotsProps {
   value: number;
+  dotCharacter: string;
 }
 
-const TraitDots = ({ value }: TraitDotsProps) => {
+const TraitDots = ({ value, dotCharacter }: TraitDotsProps) => {
   return <span>{dotCharacter.repeat(value)}</span>;
 };
 

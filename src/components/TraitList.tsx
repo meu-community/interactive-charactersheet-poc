@@ -12,7 +12,8 @@ export interface Trait {
 const TraitList = ({ traits }: TraitListProps) => {
   const traitList = traits.map((trait) => (
     <li>
-      {trait.name} x {trait.value} <TraitDots value={trait.value} />
+      {trait.name} x {trait.value}{" "}
+      <TraitDots value={trait.value} dotCharacter="O" />
     </li>
   ));
 
