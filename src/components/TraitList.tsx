@@ -1,4 +1,5 @@
 import TraitDots from "./TraitDots";
+import ListGroup from "react-bootstrap/ListGroup";
 
 export interface TraitListProps {
   traits: Trait[];
@@ -11,13 +12,13 @@ export interface Trait {
 
 const TraitList = ({ traits }: TraitListProps) => {
   const traitList = traits.map((trait) => (
-    <li>
+    <ListGroup.Item>
       {trait.name} x {trait.value}{" "}
       <TraitDots value={trait.value} dotCharacter="O" />
-    </li>
+    </ListGroup.Item>
   ));
 
-  return <ul>{traitList}</ul>;
+  return <ListGroup>{traitList}</ListGroup>;
 };
 
 export default TraitList;
