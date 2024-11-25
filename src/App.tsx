@@ -4,6 +4,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import TraitList, { Trait } from "./components/TraitList";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMasksTheater } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const traits: Trait[] = [
@@ -16,7 +17,7 @@ function App() {
   return (
     <>
       <h2>
-        Component Test <FontAwesomeIcon icon={["fas", "masks-theater"]} />
+        Component Test <FontAwesomeIcon icon={faMasksTheater} />
       </h2>
       <TraitList traits={traits} />
     </>
