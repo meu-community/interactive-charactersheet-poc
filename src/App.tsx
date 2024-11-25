@@ -17,7 +17,8 @@ function App() {
   return (
     <>
       <h2>
-        Component Test <FontAwesomeIcon icon={faMasksTheater} />
+        Test
+        <FontAwesomeIcon icon={faMasksTheater} />
       </h2>
       <TraitList traits={traits} />
     </>
