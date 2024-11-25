@@ -8,13 +8,14 @@ export interface TraitListProps {
 export interface Trait {
   name: string;
   value: number;
+  current?: number;
 }
 
 const TraitList = ({ traits }: TraitListProps) => {
   const traitList = traits.map((trait) => (
     <ListGroup.Item>
       {trait.name} x {trait.value}{" "}
-      <TraitDots value={trait.value} dotCharacter="O" />
+      <TraitDots value={trait.value} current={trait.current} />
     </ListGroup.Item>
   ));
 
