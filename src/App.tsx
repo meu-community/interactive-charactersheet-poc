@@ -3,6 +3,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import TraitList, { Trait } from "./components/TraitList";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function App() {
   const traits: Trait[] = [
@@ -14,7 +15,9 @@ function App() {
   ];
   return (
     <>
-      <h2>Component Test</h2>
+      <h2>
+        Component Test <FontAwesomeIcon icon={["fas", "masks-theater"]} />
+      </h2>
       <TraitList traits={traits} />
     </>
   );

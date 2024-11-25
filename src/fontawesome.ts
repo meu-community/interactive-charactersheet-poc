@@ -4,5 +4,6 @@ import * as faSolid from "@fortawesome/free-solid-svg-icons";
 
 library.add(
   faRegular.faCircle,
-  faSolid.faCircle
+  faSolid.faCircle,
+  faSolid.faMasksTheater
 );
