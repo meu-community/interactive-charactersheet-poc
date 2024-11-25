@@ -7,6 +7,9 @@ export interface TraitDotsProps {
   current?: number;
 }
 
+// Dots typically represent permanent traits, or those values which do not typically
+// change during gameplay. You would typically change these with XP expenditures.
+
 const TraitDots = ({ value, current }: TraitDotsProps) => {
   const solidDotCount = current || 0;
   const emptyDotCount = value < solidDotCount ? 0 : value - solidDotCount;

@@ -1,4 +1,4 @@
-import TraitDots from "./TraitDots";
+import TraitBoxes from "./TraitBoxes";
 import ListGroup from "react-bootstrap/ListGroup";
 
 export interface TraitListProps {
@@ -15,7 +15,7 @@ const TraitList = ({ traits }: TraitListProps) => {
   const traitList = traits.map((trait) => (
     <ListGroup.Item>
       {trait.name} x {trait.value}{" "}
-      <TraitDots value={trait.value} current={trait.current} />
+      <TraitBoxes value={trait.value} current={trait.current} />
     </ListGroup.Item>
   ));
 
