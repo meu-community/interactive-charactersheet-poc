@@ -1,5 +1,13 @@
 import TraitBoxes from "./TraitBoxes";
-import { Table } from "react-bootstrap";
+
+import {
+  TableContainer,
+  Table,
+  TableRow,
+  TableBody,
+  TableCell,
+  Paper,
+} from "@mui/material";
 export interface TraitListProps {
   traits: Trait[];
 }
@@ -12,20 +20,22 @@ export interface Trait {
 
 const TraitList = ({ traits }: TraitListProps) => {
   const traitList = traits.map((trait) => (
-    <tr>
-      <td align="left">
+    <TableRow>
+      <TableCell align="left">
         {trait.name} x {trait.value}
-      </td>
-      <td align="left">
+      </TableCell>
+      <TableCell align="left">
         <TraitBoxes value={trait.value} current={trait.current} />
-      </td>
-    </tr>
+      </TableCell>
+    </TableRow>
   ));
 
   return (
-    <Table hover size="sm">
-      <tbody>{traitList}</tbody>
-    </Table>
+    <TableContainer component={Paper}>
+      <Table size="small" aria-label="a dense table">
+        <TableBody>{traitList}</TableBody>
+      </Table>
+    </TableContainer>
   );
 };
 
